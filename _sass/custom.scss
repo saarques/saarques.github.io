@@ -1,0 +1,13 @@
+/**********************/
+// Custom styles here //
+/**********************/
+
+.image.profile-pic{
+	display: flex !important;
+	justify-content: center;
+	img{
+		width: 180px;
+		height: 180px;
+		border-radius: 50%;
+	}
+}
