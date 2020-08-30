@@ -78,11 +78,9 @@
   <!-- sw registration snippet -->
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").then(function (scope) {
-        console.log("hip hip hurray!, sw registered", scope);
-      }).catch(function(){
-        console.log('booo!, sw registration failed')
-      })
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js");
+      });
     }
   </script>
 </head>
