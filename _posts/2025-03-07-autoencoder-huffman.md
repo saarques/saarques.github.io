@@ -2,6 +2,7 @@
 title: Exciting News, My Paper is Published!
 author: Gajendra Saraswat
 layout: post
+date: 2025-03-07 10:00:00
 ---
 
 🌟 Exciting News: Autoencoder-Huffman Ensemble Model for Image Compression paper is now Published! 🌟
