@@ -4,7 +4,17 @@ icon: fa-user
 order: 3
 ---
 
-<a href="#" data-modal-target="#imageModal" class="image featured profile-pic"><img id = "myImg" src="assets/images/IMG_0371.HEIC" width = "500" height = "500" class = "responsive" alt="Profile Picture" /></a>
+<a href="#" class="image featured profile-pic" data-modal-target="#imageModal">
+    <img id="myImg" src="assets/images/IMG_0371.HEIC" class="responsive" alt="Profile Picture" />
+</a>
 
+<!-- Other Page Content -->
 
-<p>I am a CSE undergrad and have a decent experience of working in the field of Deep Learning. I am currently working on the SIIM-ISIC Melanoma Classification competition on Kaggle. It is deep learning competition regarding image classification.</p>
+<!-- Modal Structure -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>  <!-- The close button (×) -->
+    <img class="modal-content" id="img01" src="">
+    <div id="caption"></div>
+</div>
+
+<p>Sleeping is the default case to my switch statement.</p>
