@@ -31,4 +31,5 @@ A huge thanks to Springer Nature for publishing this work and supporting open sc
 Last but not least, thanks to NIT Warangal for giving me this chance, I will forever be grateful to the memories and successes I collected there.
 
 Here’s to more innovations at the intersection of AI and traditional computing! 🚀
+
 hashtag#DeepLearning hashtag#ImageCompression hashtag#Research hashtag#AI hashtag#Gratitude
