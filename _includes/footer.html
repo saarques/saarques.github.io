@@ -1,13 +1,16 @@
-<!-- Footer -->
+<!-- Modern Footer -->
 <div id="footer">
-  
-  <!-- Copyright -->
-  <ul class="copyright">
-    {% if site.title or site.author %}
-      <li>&copy; {{- site.title | default: site.author -}}. All rights reserved.</li>
-    {% endif %}
-    <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-    <li>Jekyll integration: <a href="https://chrisbobbe.github.io/">Chris Bobbe</a></li>
-  </ul>
-  
+  <div class="container">
+    <div class="footer-cta">
+      <div>
+        <h3>Let's talk.</h3>
+        <p>saraswatgajendra97@gmail.com • <a href="https://linkedin.com/in/sarques" style="color:#93c5fd;">linkedin.com/in/sarques</a> • <a href="https://github.com/saarques" style="color:#93c5fd;">github.com/saarques</a></p>
+      </div>
+      <a href="mailto:saraswatgajendra97@gmail.com" class="btn" style="background:white;color:#0f172a !important;padding:10px 22px;">Email me →</a>
+    </div>
+    <ul class="copyright" style="margin-top:20px;text-align:center;opacity:0.7;">
+      <li>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</li>
+      <li>Built with Jekyll • Hosted on GitHub Pages</li>
+    </ul>
+  </div>
 </div>

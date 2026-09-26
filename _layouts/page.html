@@ -2,17 +2,16 @@
 layout: default
 ---
 {%- include header.html -%}
-
-<!-- Main -->
 <div id="main">
-	<!-- Page -->
-	<article class="shade-two">
-	  <div class="container">
-			<header>
-				<h2>{{- page.title -}}</h2>
-				{%- if page.subtitle -%}<p>{{- page.subtitle -}}</p>{%- endif -%}
-			</header>
-	    {{- content -}}
-	  </div>
-	</article>
+  <div class="container" style="padding-top:16px;">
+    <article class="role-hero" style="background:white;border:1px solid var(--border);border-radius:16px;padding:32px;">
+      <header>
+        <h1 style="margin:0;">{{ page.title }}</h1>
+        {%- if page.subtitle -%}<p style="color:var(--text-2);margin-top:8px;">{{ page.subtitle }}</p>{%- endif -%}
+      </header>
+      <div style="margin-top:20px;">
+        {{ content }}
+      </div>
+    </article>
+  </div>
 </div>
