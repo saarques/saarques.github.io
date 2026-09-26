@@ -18,11 +18,12 @@ importScripts(
 // // let Workbox handle our precache list
 // workbox.precaching.precacheAndRoute(self.__precacheManifest);
 
+// Bump v3 forces cache bust for main.css?v=3
 if (workbox) {
   workbox.routing.registerRoute(
     /\.(?:js|css)$/,
     new workbox.strategies.StaleWhileRevalidate({
-      cacheName: "static-resources",
+      cacheName: "static-resources-v3",
     })
   );
 
