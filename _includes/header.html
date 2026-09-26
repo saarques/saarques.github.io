@@ -22,6 +22,14 @@
   </div>
   <div class="bottom" style="display:flex;gap:12px;align-items:center;">
     {%- include social_icons.html -%}
-    <a href="mailto:{{ site.email }}" class="btn btn-dark" style="padding:8px 14px;font-size:12px;">Resume</a>
+    <div style="position:relative;">
+      <a href="#" class="btn btn-dark" style="padding:8px 14px;font-size:12px;" onclick="document.getElementById('resume-drop').classList.toggle('show'); return false;">Resume ▾</a>
+      <div id="resume-drop" style="display:none;position:absolute;right:0;top:34px;background:white;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.08);min-width:180px;z-index:200;overflow:hidden;">
+        <a href="{{ 'assets/resume/Gajendra_Saraswat_Backend_OnePager.pdf' | relative_url }}" target="_blank" style="display:block;padding:10px 14px;font-size:12px;color:var(--text-1);text-decoration:none;border-bottom:1px solid var(--border);">Backend PDF</a>
+        <a href="{{ 'assets/resume/Gajendra_Saraswat_AI_OnePager.pdf' | relative_url }}" target="_blank" style="display:block;padding:10px 14px;font-size:12px;color:var(--text-1);text-decoration:none;">AI PDF</a>
+      </div>
+    </div>
+    <script>document.addEventListener('click',function(e){var d=document.getElementById('resume-drop'); if(d && !e.target.closest('#resume-drop') && !e.target.closest('a.btn-dark')) d.classList.remove('show');});</script>
+    <style>#resume-drop.show{display:block !important;}</style>
   </div>
 </div>
