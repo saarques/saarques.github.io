@@ -64,8 +64,8 @@ description: Backend Engineer (Java/Spring/Kafka) & AI Engineer (PyTorch/RAG) â€
 </div>
 
 <!-- Track Selector -->
-<div class="track-label">Choose your track</div>
-<div class="track-subtitle">Two tailored profiles â€” same person, different lens. Recruiters, pick your track.</div>
+<div class="track-label">Explore by focus</div>
+<div class="track-subtitle">Two perspectives â€” backend systems and AI / ML.</div>
 
 <div class="track-grid">
   <div class="track-card backend">
@@ -86,7 +86,6 @@ description: Backend Engineer (Java/Spring/Kafka) & AI Engineer (PyTorch/RAG) â€
       <span class="chip">SiteMinder</span>
     </div>
     <a href="{{ '/backend' | relative_url }}" class="btn btn-primary" style="width:100%;">Open Backend Page â†’</a>
-    <div style="font-size:9px;color:var(--text-3);margin-top:10px;">Resume: Gajendra_Saraswat_Backend_OnePager.pdf</div>
   </div>
 
   <div class="track-card ai">
@@ -106,7 +105,6 @@ description: Backend Engineer (Java/Spring/Kafka) & AI Engineer (PyTorch/RAG) â€
       <span class="chip">Heroku</span>
     </div>
     <a href="{{ '/ai' | relative_url }}" class="btn" style="width:100%;background:var(--purple);color:white !important;">Open AI Page â†’</a>
-    <div style="font-size:9px;color:var(--text-3);margin-top:10px;">Resume: Gajendra_Saraswat_AI_OnePager.pdf</div>
   </div>
 </div>
 
@@ -134,7 +132,7 @@ description: Backend Engineer (Java/Spring/Kafka) & AI Engineer (PyTorch/RAG) â€
 <!-- Projects -->
 <div id="projects" style="margin-top:16px;">
   <div class="track-label">Selected Projects</div>
-  <div class="track-subtitle">Talk about these in interviews â€” STAR ready</div>
+  <div class="track-subtitle">Featured work</div>
   <div class="projects-grid">
     <div class="project-card">
       <div class="project-top">Springer Publication</div>
