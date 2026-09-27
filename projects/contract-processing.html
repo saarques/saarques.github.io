@@ -18,6 +18,11 @@ permalink: /projects/contract-processing
 
 <div class="role-grid">
   <div>
+       <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:16px;overflow:hidden;">
+      <img src="{{ 'assets/images/proj_contract_flow.png' | relative_url }}" alt="Contract processing — Select All, spinner, batch vs loop — 36% faster" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--border);" />
+      <div style="font-size:9px;color:var(--text-3);margin-top:8px;text-align:center;">300-contract story: Select All valid → spinner → batch update (not for-loop 1×1)</div>
+    </div>
+
     <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
       <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">PROBLEM</div>
       <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Contract uploads were slow and non-deterministic — large batches hit transaction timeouts, retries created duplicates, and SLAs slipped. The domain is banking: correctness and idempotency matter more than raw speed.</p>

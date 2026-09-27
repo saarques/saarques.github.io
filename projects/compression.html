@@ -18,6 +18,11 @@ permalink: /projects/compression
 
 <div class="role-grid">
   <div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:16px;overflow:hidden;">
+      <img src="{{ 'assets/images/proj_compression_flow.png' | relative_url }}" alt="Autoencoder-Huffman — encoder → latent 70–100 → Huffman → 24.2×" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--border);" />
+      <div style="font-size:9px;color:var(--text-3);margin-top:8px;text-align:center;">Encoder → LSR (70–100 dims) → Quantize → Huffman → Bitstream • ACR table included</div>
+    </div>
+
     <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
       <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">PROBLEM</div>
       <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Image datasets are large and noisy. Classical Huffman is optimal for symbols but not for features; pure deep compression loses interpretability. Can a hybrid win on ratio without hurting reconstruction?</p>

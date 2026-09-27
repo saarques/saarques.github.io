@@ -18,6 +18,11 @@ permalink: /projects/fraud-detection
 
 <div class="role-grid">
   <div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:16px;overflow:hidden;">
+      <img src="{{ 'assets/images/proj_fraud_flow.png' | relative_url }}" alt="Fraud detection — Transaction → Flask → SMOTE → 97.6% → Docker" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--border);" />
+      <div style="font-size:9px;color:var(--text-3);margin-top:8px;text-align:center;">Transaction (0.17% fraud) → Flask → SMOTE balanced → 97.6% / 89.6% → Docker/Heroku</div>
+    </div>
+
     <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
       <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">PROBLEM</div>
       <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Fraud is ~0.17% of transactions. Naive classifiers learn to predict “not fraud” and score 99% accuracy while missing the cases that matter. Need recall without drowning in false positives, plus a service that other systems can call.</p>

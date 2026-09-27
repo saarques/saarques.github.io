@@ -18,6 +18,11 @@ permalink: /projects/leukemia
 
 <div class="role-grid">
   <div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:16px;overflow:hidden;">
+      <img src="{{ 'assets/images/proj_leukemia_flow.png' | relative_url }}" alt="Leukemia — Microscopic → Preprocess → SeResNext → ~90% → Docker" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--border);" />
+      <div style="font-size:9px;color:var(--text-3);margin-top:8px;text-align:center;">Microscopic → Pandas/NumPy Augment → SeResNext (PyTorch) → ~90% → Docker Hub API</div>
+    </div>
+
     <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
       <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">PROBLEM</div>
       <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Manual microscopy is slow and error-prone — healthy vs leukemic cells look alike. Need a reproducible model that handles small, imbalanced medical data.</p>
