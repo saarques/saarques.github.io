@@ -1,0 +1,51 @@
+---
+layout: role
+title: Credit Card Fraud Detection
+subtitle: 97.6% accuracy, 89.6% recall — imbalanced data done right
+description: Case study — Flask REST fraud detection with SMOTE, balanced weights, Docker/Heroku. 16★/16 forks.
+permalink: /projects/fraud-detection
+---
+
+<div class="role-hero">
+  <div style="display:inline-flex;background:#fef3c7;border:1px solid #fde68a;color:#92400e;font-size:11px;font-weight:800;padding:6px 12px;border-radius:999px;">Final Year Project • Sep 2020 • 16★ / 16 forks</div>
+  <h1>Credit Card Fraud Detection</h1>
+  <div class="role-subtitle">Python • Scikit-learn • SMOTE • Flask • Docker • Heroku</div>
+  <p style="font-size:11px;color:var(--text-2);margin-top:8px;max-width:700px;line-height:1.6;">ML-based fraud system with REST APIs, built for extreme imbalance. <a href="https://github.com/saarques/credit-card-fraud-detection" target="_blank" style="color:var(--blue);">github.com/saarques/credit-card-fraud-detection →</a></p>
+  <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+    <span class="chip">Python</span><span class="chip">Scikit-learn</span><span class="chip">SMOTE</span><span class="chip">Flask</span><span class="chip">Docker</span>
+  </div>
+</div>
+
+<div class="role-grid">
+  <div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">PROBLEM</div>
+      <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Fraud is ~0.17% of transactions. Naive classifiers learn to predict “not fraud” and score 99% accuracy while missing the cases that matter. Need recall without drowning in false positives, plus a service that other systems can call.</p>
+    </div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">APPROACH</div>
+      <ul style="font-size:11px;color:var(--text-2);line-height:1.8;margin-top:8px;padding-left:16px;">
+        <li>Handled imbalance with <strong>SMOTE</strong> + balanced class weights + dimensionality reduction — not just undersampling.</li>
+        <li>Logistic Regression with tuned threshold → <strong>97.6% accuracy, 89.6% recall</strong> — optimized for recall/precision tradeoff.</li>
+        <li>Flask REST with validation/error handling, rate limiting, query optimization, caching.</li>
+        <li>Containerized with Docker, deployed on Heroku with structured logging/monitoring.</li>
+      </ul>
+      <div style="margin-top:12px;background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px;font-size:11px;color:var(--text-2);"><strong>Flow:</strong> Transaction → Flask (validate) → Model (predict) → Response + log → Dashboard. CI via Git, deploy via Heroku.</div>
+    </div>
+    <div style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:16px;padding:20px;">
+      <div style="font-size:11px;font-weight:800;color:#065f46;letter-spacing:.6px;">RESULT</div>
+      <p style="font-size:13px;font-weight:800;color:#065f46;margin-top:6px;">97.6% accuracy, 89.6% recall — useful, not just accurate.</p>
+      <p style="font-size:11px;color:var(--text-2);margin-top:6px;">16 stars / 16 forks, reproducible via Docker. Lessons directly applied to BNY anomaly detection thinking.</p>
+    </div>
+  </div>
+  <div>
+    <div class="resume-box">
+      <div style="font-size:12px;font-weight:800;color:var(--text-1);">Stack & links</div>
+      <div style="font-size:11px;color:var(--text-2);margin-top:6px;line-height:1.7;">Python, Scikit-learn, Flask, REST, Docker, Heroku<br/><a href="https://github.com/saarques/credit-card-fraud-detection" style="color:var(--blue);">GitHub →</a> • <a href="https://github.com/saarques/credit-card-fraud-detection" style="color:var(--blue);">Docker →</a></div>
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+        <a href="{{ '/ai' | relative_url }}" class="btn btn-outline" style="width:100%;">AI profile →</a>
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary" style="width:100%;">All projects</a>
+      </div>
+    </div>
+  </div>
+</div>

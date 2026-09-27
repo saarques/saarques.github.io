@@ -1,0 +1,57 @@
+---
+layout: role
+title: High-throughput Contract Processing Service
+subtitle: 36% faster on banking workloads — Spring Boot, @Async/@Transactional, Kafka on GAE
+description: Case study — Contract processing 36% faster via Spring Boot microservices, Kafka, batching, API Gateway.
+permalink: /projects/contract-processing
+---
+
+<div class="role-hero">
+  <div style="display:inline-flex;background:#dbeafe;border:1px solid #bfdbfe;color:#2563eb;font-size:11px;font-weight:800;padding:6px 12px;border-radius:999px;">Banking • Mar 2025 • BNY Mellon Contract Platform</div>
+  <h1>High-throughput Contract Processing</h1>
+  <div class="role-subtitle">Java 17 / Spring Boot / Kafka • @Async / @Transactional • GAE / Docker / GitLab CI/CD</div>
+  <p style="font-size:11px;color:var(--text-2);margin-top:8px;max-width:700px;line-height:1.6;">Refactored the critical contract upload pipeline that handles high-volume financial workloads under strict SLAs. Owned the service end-to-end.</p>
+  <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+    <span class="chip">Java 17</span><span class="chip">Spring Boot</span><span class="chip">Kafka</span><span class="chip">API Gateway</span><span class="chip">GAE</span><span class="chip">JUnit/Mockito</span>
+  </div>
+</div>
+
+<div class="role-grid">
+  <div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">PROBLEM</div>
+      <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Contract uploads were slow and non-deterministic — large batches hit transaction timeouts, retries created duplicates, and SLAs slipped. The domain is banking: correctness and idempotency matter more than raw speed.</p>
+    </div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">APPROACH</div>
+      <ul style="font-size:11px;color:var(--text-2);line-height:1.8;margin-top:8px;padding-left:16px;">
+        <li>Re-tuned transaction boundaries — short, batched <code>@Transactional</code> units instead of one giant TX.</li>
+        <li>Parallelized with <code>@Async</code> + bounded queues — predictable throughput, no thread starvation.</li>
+        <li>Added idempotency keys + validation/anomaly detection — safe retries.</li>
+        <li>Secured REST + Kafka via API Gateway / Manager (throttling, rate limiting, sandbox URLs).</li>
+        <li>Deployed on Google App Engine with Docker + GitLab CI/CD, expanded JUnit/Mockito/API coverage for confidence.</li>
+      </ul>
+      <div style="margin-top:12px;background:#f8fafc;border:1px solid var(--border);border-radius:10px;padding:12px;font-size:11px;color:var(--text-2);"><strong>Architecture sketch:</strong> Client → API Gateway (throttle) → Spring Boot (Controller → Service @Async → Repo @Transactional batched) → Kafka (async reconciliation) → DB → GAE/Docker.</div>
+    </div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">CHALLENGES</div>
+      <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Tuning <code>@Async</code> thread pools without starving Kafka consumers; keeping transactions short enough to avoid lock escalation but not so short that rollback cost spikes; and the <code>*.bnymellon.* → *.bny.*</code> URI migration with zero perceived downtime across F5 and assembly configs.</p>
+    </div>
+    <div style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:16px;padding:20px;">
+      <div style="font-size:11px;font-weight:800;color:#065f46;letter-spacing:.6px;">RESULT</div>
+      <p style="font-size:13px;font-weight:800;color:#065f46;margin-top:6px;">36% end-to-end reduction, predictable SLAs, zero-downtime migration, higher deployment confidence from expanded tests.</p>
+      <p style="font-size:11px;color:var(--text-2);margin-top:6px;">Valid patterns reused for DR/Kafka work on the same platform.</p>
+    </div>
+  </div>
+  <div>
+    <div class="resume-box">
+      <div style="font-size:12px;font-weight:800;color:var(--text-1);">Stack</div>
+      <div style="font-size:11px;color:var(--text-2);margin-top:6px;line-height:1.7;">Java 17, Spring Boot, Spring Data JPA/Hibernate, Kafka, API Gateway/Manager, GAE, Docker, Jenkins, GitLab CI/CD, JUnit/Mockito</div>
+      <div style="margin-top:12px;font-size:11px;color:var(--text-3);">Team: BNY Mellon Contract Platform<br/>Role: Backend owner<br/>Timeline: Mar 2025</div>
+      <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
+        <a href="{{ '/backend' | relative_url }}" class="btn btn-primary" style="width:100%;">Backend profile →</a>
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn-outline" style="width:100%;">All projects</a>
+      </div>
+    </div>
+  </div>
+</div>

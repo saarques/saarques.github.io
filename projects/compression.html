@@ -1,0 +1,54 @@
+---
+layout: role
+title: Autoencoder-Huffman Ensemble for Image Compression
+subtitle: Springer Dec 2024 — 5.5× to 24.2× with minimal loss
+description: Springer case study — two-stage autoencoder + Huffman on MNIST/CIFAR-10/Fashion MNIST.
+permalink: /projects/compression
+---
+
+<div class="role-hero ai-hero" style="border-top:4px solid var(--purple);">
+  <div style="display:inline-flex;background:#ede9fe;border:1px solid #ddd6fe;color:var(--purple);font-size:11px;font-weight:800;padding:6px 12px;border-radius:999px;">Research • Springer Singapore • Dec 2024</div>
+  <h1>Autoencoder-Huffman Ensemble</h1>
+  <div class="role-subtitle" style="color:var(--purple);">PyTorch • Autoencoders • Huffman coding • MNIST / CIFAR-10 / Fashion MNIST</div>
+  <p style="font-size:11px;color:var(--text-2);margin-top:8px;max-width:700px;line-height:1.6;">Two-stage compression: encoder-decoder learns a compact Latent Space Representation (LSR), Huffman squeezes it further. Published in Springer proceedings. <a href="https://link.springer.com/chapter/10.1007/978-981-97-6714-4_18" target="_blank" style="color:var(--purple);">Springer link →</a> • <a href="https://github.com/saarques/AI-Without-Borders---Projects" target="_blank" style="color:var(--purple);">Code →</a></p>
+  <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+    <span class="chip">PyTorch</span><span class="chip">Autoencoders</span><span class="chip">Huffman</span><span class="chip">Research</span>
+  </div>
+</div>
+
+<div class="role-grid">
+  <div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">PROBLEM</div>
+      <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Image datasets are large and noisy. Classical Huffman is optimal for symbols but not for features; pure deep compression loses interpretability. Can a hybrid win on ratio without hurting reconstruction?</p>
+    </div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">APPROACH</div>
+      <ul style="font-size:11px;color:var(--text-2);line-height:1.8;margin-top:8px;padding-left:16px;">
+        <li>Trained encoder-decoder to map images → low-dimensional LSR that preserves structure while filtering noise.</li>
+        <li>Applied Huffman on quantized latent codes — classical entropy coding on learned representations.</li>
+        <li>Evaluated across MNIST, CIFAR-10, Fashion MNIST at latent dims 70–100, with/without codebook overhead.</li>
+      </ul>
+      <div style="margin-top:12px;background:#f5f3ff;border:1px solid #ddd6fe;border-radius:10px;padding:12px;font-size:11px;color:var(--text-2);"><strong>Diagram:</strong> Image → Encoder → LSR (70–100 dims) → Quantize → Huffman → Bitstream → Huffman Decode → Decoder → Recon.</div>
+    </div>
+    <div style="background:#f5f3ff;border:1px solid #ddd6fe;border-radius:16px;padding:20px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:#5b21b6;letter-spacing:.6px;">RESULT</div>
+      <p style="font-size:13px;font-weight:800;color:#5b21b6;margin-top:6px;">5.5×–24.2× compression with minimal loss.</p>
+      <p style="font-size:11px;color:var(--text-2);margin-top:6px;">ACRs without overhead: 15.654 (MNIST), 24.230 (CIFAR-10), 15.171 (Fashion MNIST). With overhead: ~5.5–8.7 — robust across dims. Published Springer, thesis at NIT Warangal (Prof. U.S.N. Raju).</p>
+    </div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">WHAT I LEARNED</div>
+      <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Hybrid deep + classical beats either alone when the representation is right. Also: rigorous evaluation (with vs without overhead) matters more than a single peak number.</p>
+    </div>
+  </div>
+  <div>
+    <div class="resume-box" style="border-top:4px solid var(--purple);">
+      <div style="font-size:12px;font-weight:800;color:var(--text-1);">Publication</div>
+      <div style="font-size:11px;color:var(--text-2);margin-top:6px;line-height:1.7;">Springer, Singapore — Dec 2024<br/><a href="https://link.springer.com/chapter/10.1007/978-981-97-6714-4_18" style="color:var(--purple);">link.springer.com →</a><br/>Thesis: NIT Warangal</div>
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+        <a href="{{ '/ai' | relative_url }}" class="btn" style="width:100%;background:var(--purple);color:white !important;">AI profile →</a>
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn-outline" style="width:100%;border-color:var(--purple);color:var(--purple) !important;">All projects</a>
+      </div>
+    </div>
+  </div>
+</div>

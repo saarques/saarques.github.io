@@ -1,0 +1,60 @@
+---
+layout: role
+title: Projects
+subtitle: Case studies — problem, approach, impact
+description: Case studies by Gajendra Saraswat — contract processing 36% faster, fraud 97.6%, leukemia ~90%, Springer 24.2× compression.
+permalink: /projects/
+---
+
+<div class="role-hero">
+  <h1>Projects</h1>
+  <div class="role-subtitle">Four case studies — the stories I tell in interviews, with architecture and tradeoffs.</div>
+  <p style="font-size:11px;color:var(--text-2);margin-top:8px;max-width:680px;">Each is a STAR-ready deep dive. Click through for problem → stack → architecture → result.</p>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;">
+  <a href="{{ '/projects/contract-processing' | relative_url }}" style="text-decoration:none;">
+    <div class="project-card" style="height:100%;">
+      <div class="project-top" style="background:#dbeafe;color:#1e40af;">Banking • Spring Boot • Kafka</div>
+      <div class="project-body">
+        <h4>High-throughput Contract Processing</h4>
+        <p>36% faster via @Async/@Transactional + batching, Kafka via API Gateway on GAE. Mar 2025.</p>
+        <span style="font-size:10px;font-weight:700;color:var(--blue);">Read case study →</span>
+      </div>
+    </div>
+  </a>
+  <a href="{{ '/projects/compression' | relative_url }}" style="text-decoration:none;">
+    <div class="project-card" style="height:100%;">
+      <div class="project-top" style="background:#ede9fe;color:#5b21b6;">Springer Dec 2024</div>
+      <div class="project-body">
+        <h4>Autoencoder-Huffman Ensemble</h4>
+        <p>5.5–24.2× on MNIST/CIFAR-10 with minimal loss. Published Springer.</p>
+        <span style="font-size:10px;font-weight:700;color:var(--purple);">Read case study →</span>
+      </div>
+    </div>
+  </a>
+  <a href="{{ '/projects/fraud-detection' | relative_url }}" style="text-decoration:none;">
+    <div class="project-card" style="height:100%;">
+      <div class="project-top" style="background:#fef3c7;color:#92400e;">Flask • 16★/16 forks</div>
+      <div class="project-body">
+        <h4>Credit Card Fraud Detection</h4>
+        <p>97.6% acc, 89.6% recall • SMOTE, Docker/Heroku. Sep 2020.</p>
+        <span style="font-size:10px;font-weight:700;color:var(--blue);">Read case study →</span>
+      </div>
+    </div>
+  </a>
+  <a href="{{ '/projects/leukemia' | relative_url }}" style="text-decoration:none;">
+    <div class="project-card" style="height:100%;">
+      <div class="project-top" style="background:#ecfdf5;color:#065f46;">PyTorch • SeResNext</div>
+      <div class="project-body">
+        <h4>Leukemia Detection API</h4>
+        <p>~90% on microscopic images via SeResNext, Docker Hub. Jun–Sep 2019.</p>
+        <span style="font-size:10px;font-weight:700;color:#047857;">Read case study →</span>
+      </div>
+    </div>
+  </a>
+</div>
+
+<div style="margin-top:16px;background:white;border:1px solid var(--border);border-radius:16px;padding:16px;text-align:center;font-size:11px;color:var(--text-3);">
+  All on <a href="https://github.com/saarques" style="color:var(--blue);">github.com/saarques</a> • Springer: <a href="https://link.springer.com/chapter/10.1007/978-981-97-6714-4_18" style="color:var(--purple);">Autoencoder-Huffman</a>
+</div>

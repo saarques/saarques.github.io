@@ -13,10 +13,10 @@
     <nav id="nav">
       <ul>
         <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}><span>Home</span></a></li>
+        <li><a href="{{ '/about' | relative_url }}" {% if page.url contains 'about' %}class="active"{% endif %}><span>About</span></a></li>
         <li><a href="{{ '/backend' | relative_url }}" {% if page.url contains 'backend' %}class="active"{% endif %}><span>Backend</span></a></li>
         <li><a href="{{ '/ai' | relative_url }}" {% if page.url contains '/ai' %}class="active"{% endif %}><span>AI</span></a></li>
-        <li><a href="{{ '/#projects' | relative_url }}"><span>Projects</span></a></li>
-        <li><a href="{{ '/#experience' | relative_url }}"><span>Experience</span></a></li>
+        <li><a href="{{ '/projects/' | relative_url }}" {% if page.url contains 'projects' %}class="active"{% endif %}><span>Projects</span></a></li>
       </ul>
     </nav>
   </div>

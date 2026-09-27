@@ -1,0 +1,50 @@
+---
+layout: role
+title: Leukemia Detection — Blood Cancer Diagnosis API
+subtitle: ~90% on microscopic images — SeResNext via PyTorch
+description: Case study — PyTorch leukemia classification on microscopic cell images, Docker Hub.
+permalink: /projects/leukemia
+---
+
+<div class="role-hero">
+  <div style="display:inline-flex;background:#ecfdf5;border:1px solid #a7f3d0;color:#047857;font-size:11px;font-weight:800;padding:6px 12px;border-radius:999px;">Internship • Jun–Sep 2019 • Medical Imaging</div>
+  <h1>Leukemia Detection API</h1>
+  <div class="role-subtitle">PyTorch • Keras • SeResNext • Pandas/NumPy • Docker Hub</div>
+  <p style="font-size:11px;color:var(--text-2);margin-top:8px;max-width:700px;line-height:1.6;">Automated leukemia classification addressing morphological similarity of cells. <a href="https://github.com/saarques/Blood-Cancer-Diagnosis-API" target="_blank" style="color:#047857;">github.com/saarques/Blood-Cancer-Diagnosis-API →</a></p>
+  <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap;">
+    <span class="chip">PyTorch</span><span class="chip">SeResNext</span><span class="chip">Keras</span><span class="chip">Docker</span>
+  </div>
+</div>
+
+<div class="role-grid">
+  <div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">PROBLEM</div>
+      <p style="font-size:11px;color:var(--text-2);margin-top:8px;line-height:1.7;">Manual microscopy is slow and error-prone — healthy vs leukemic cells look alike. Need a reproducible model that handles small, imbalanced medical data.</p>
+    </div>
+    <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:800;color:var(--text-3);letter-spacing:.6px;">APPROACH</div>
+      <ul style="font-size:11px;color:var(--text-2);line-height:1.8;margin-top:8px;padding-left:16px;">
+        <li>Preprocessing with Pandas/NumPy — normalization, augmentation for small data.</li>
+        <li>SeResNext via PyTorch/Keras — transfer learning + hyperparameter tuning → <strong>~90% accuracy</strong>.</li>
+        <li>Containerized as Docker image on Docker Hub for reproducible medical imaging pipeline.</li>
+      </ul>
+      <div style="margin-top:12px;background:#ecfdf5;border:1px solid #a7f3d0;border-radius:10px;padding:12px;font-size:11px;color:var(--text-2);"><strong>Pipeline:</strong> Microscopic image → Preprocess → SeResNext (PyTorch) → Prediction → Docker API.</div>
+    </div>
+    <div style="background:#ecfdf5;border:1px solid #a7f3d0;border-radius:16px;padding:20px;">
+      <div style="font-size:11px;font-weight:800;color:#065f46;letter-spacing:.6px;">RESULT</div>
+      <p style="font-size:13px;font-weight:800;color:#065f46;margin-top:6px;">~90% accuracy via tuned SeResNext, Dockerized for reuse.</p>
+      <p style="font-size:11px;color:var(--text-2);margin-top:6px;">Built as an API, not a notebook — same mindset I use for production Spring services.</p>
+    </div>
+  </div>
+  <div>
+    <div class="resume-box">
+      <div style="font-size:12px;font-weight:800;color:var(--text-1);">Stack & links</div>
+      <div style="font-size:11px;color:var(--text-2);margin-top:6px;line-height:1.7;">PyTorch, Keras, SeResNext, Pandas, NumPy, Docker<br/><a href="https://github.com/saarques/Blood-Cancer-Diagnosis-API" style="color:#047857;">GitHub →</a></div>
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px;">
+        <a href="{{ '/ai' | relative_url }}" class="btn" style="width:100%;background:#047857;color:white !important;">AI profile →</a>
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn-outline" style="width:100%;">All projects</a>
+      </div>
+    </div>
+  </div>
+</div>
