@@ -18,9 +18,9 @@ permalink: /projects/contract-processing
 
 <div class="role-grid">
   <div>
-       <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:16px;overflow:hidden;">
-      <img src="{{ 'assets/images/proj_contract_flow.png' | relative_url }}" alt="Contract processing — Select All, spinner, batch vs loop — 36% faster" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--border);" />
-      <div style="font-size:9px;color:var(--text-3);margin-top:8px;text-align:center;">300-contract story: Select All valid → spinner → batch update (not for-loop 1×1)</div>
+        <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:16px;overflow:hidden;">
+      <img src="{{ 'assets/images/proj_contract_flow.png' | relative_url }}" alt="Contract processing — Select All, spinner, batch vs loop — 36% faster" class="project-diagram" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--border);cursor:zoom-in;" onclick="openProjectDialog(this.src, this.alt)" />
+      <div style="font-size:9px;color:var(--text-3);margin-top:8px;text-align:center;cursor:zoom-in;" onclick="openProjectDialog('{{ 'assets/images/proj_contract_flow.png' | relative_url }}', 'Contract processing — 300-contract story')">300-contract story: Select All valid → spinner → batch update (not for-loop 1×1) — Click to enlarge →</div>
     </div>
 
     <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
@@ -54,9 +54,21 @@ permalink: /projects/contract-processing
       <div style="font-size:11px;color:var(--text-2);margin-top:6px;line-height:1.7;">Java 17, Spring Boot, Spring Data JPA/Hibernate, Kafka, API Gateway/Manager, GAE, Docker, Jenkins, GitLab CI/CD, JUnit/Mockito</div>
       <div style="margin-top:12px;font-size:11px;color:var(--text-3);">Team: BNY Mellon Contract Platform<br/>Role: Backend owner<br/>Timeline: Mar 2025</div>
       <div style="margin-top:14px;display:flex;flex-direction:column;gap:8px;">
-        <a href="{{ '/backend' | relative_url }}" class="btn btn-primary" style="width:100%;">Backend profile →</a>
-        <a href="{{ '/projects/' | relative_url }}" class="btn btn-outline" style="width:100%;">All projects</a>
+        <a href="{{ '/backend' | relative_url }}" class="btn btn-primary" style="width:100%;box-sizing:border-box;overflow:visible;">Backend profile →</a>
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn-outline" style="width:100%;box-sizing:border-box;overflow:visible;">All projects</a>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Dialog for project diagrams -->
+<div id="project-dialog" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.88);z-index:9999;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;" onclick="closeProjectDialog()">
+  <img id="project-dialog-img" src="" alt="" style="max-width:92vw;max-height:88vh;width:auto;height:auto;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.4);background:white;display:block;" onclick="event.stopPropagation()" />
+  <button onclick="closeProjectDialog()" aria-label="Close" style="position:absolute;top:16px;right:16px;background:white;border:none;border-radius:50%;width:40px;height:40px;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.2);">×</button>
+  <div id="project-dialog-caption" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.95);padding:8px 14px;border-radius:999px;font-size:11px;color:var(--text-2);max-width:80vw;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.1);"></div>
+</div>
+<script>
+function openProjectDialog(src, alt){var d=document.getElementById('project-dialog');var i=document.getElementById('project-dialog-img');var c=document.getElementById('project-dialog-caption');i.src=src;i.alt=alt||'';c.textContent=alt||'';d.style.display='flex';document.body.style.overflow='hidden';}
+function closeProjectDialog(){document.getElementById('project-dialog').style.display='none';document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape') closeProjectDialog();});
+</script>

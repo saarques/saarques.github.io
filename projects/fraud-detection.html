@@ -19,8 +19,8 @@ permalink: /projects/fraud-detection
 <div class="role-grid">
   <div>
     <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:16px;overflow:hidden;">
-      <img src="{{ 'assets/images/proj_fraud_flow.png' | relative_url }}" alt="Fraud detection — Transaction → Flask → SMOTE → 97.6% → Docker" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--border);" />
-      <div style="font-size:9px;color:var(--text-3);margin-top:8px;text-align:center;">Transaction (0.17% fraud) → Flask → SMOTE balanced → 97.6% / 89.6% → Docker/Heroku</div>
+      <img src="{{ 'assets/images/proj_fraud_flow.png' | relative_url }}" alt="Fraud detection — Transaction → Flask → SMOTE → 97.6% → Docker" class="project-diagram" style="width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--border);cursor:zoom-in;" onclick="openProjectDialog(this.src, this.alt)" />
+      <div style="font-size:9px;color:var(--text-3);margin-top:8px;text-align:center;cursor:zoom-in;" onclick="openProjectDialog('{{ 'assets/images/proj_fraud_flow.png' | relative_url }}', 'Fraud detection — Transaction → Flask → SMOTE → 97.6% → Docker')">Transaction (0.17% fraud) → Flask → SMOTE balanced → 97.6% / 89.6% → Docker/Heroku — Click to enlarge →</div>
     </div>
 
     <div style="background:white;border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:16px;">
@@ -48,9 +48,20 @@ permalink: /projects/fraud-detection
       <div style="font-size:12px;font-weight:800;color:var(--text-1);">Stack & links</div>
       <div style="font-size:11px;color:var(--text-2);margin-top:6px;line-height:1.7;">Python, Scikit-learn, Flask, REST, Docker, Heroku<br/><a href="https://github.com/saarques/credit-card-fraud-detection" style="color:var(--blue);">GitHub →</a> • <a href="https://github.com/saarques/credit-card-fraud-detection" style="color:var(--blue);">Docker →</a></div>
       <div style="margin-top:12px;display:flex;flex-direction:column;gap:8px;">
-        <a href="{{ '/ai' | relative_url }}" class="btn btn-outline" style="width:100%;">AI profile →</a>
-        <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary" style="width:100%;">All projects</a>
+        <a href="{{ '/ai' | relative_url }}" class="btn btn-outline" style="width:100%;box-sizing:border-box;overflow:visible;">AI profile →</a>
+        <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary" style="width:100%;box-sizing:border-box;overflow:visible;">All projects</a>
       </div>
     </div>
   </div>
 </div>
+
+<div id="project-dialog" style="display:none;position:fixed;inset:0;background:rgba(15,23,42,0.88);z-index:9999;align-items:center;justify-content:center;padding:24px;cursor:zoom-out;" onclick="closeProjectDialog()">
+  <img id="project-dialog-img" src="" alt="" style="max-width:92vw;max-height:88vh;width:auto;height:auto;border-radius:12px;box-shadow:0 24px 64px rgba(0,0,0,0.4);background:white;display:block;" onclick="event.stopPropagation()" />
+  <button onclick="closeProjectDialog()" aria-label="Close" style="position:absolute;top:16px;right:16px;background:white;border:none;border-radius:50%;width:40px;height:40px;font-size:22px;line-height:1;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.2);">×</button>
+  <div id="project-dialog-caption" style="position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.95);padding:8px 14px;border-radius:999px;font-size:11px;color:var(--text-2);max-width:80vw;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.1);"></div>
+</div>
+<script>
+function openProjectDialog(src, alt){var d=document.getElementById('project-dialog');var i=document.getElementById('project-dialog-img');var c=document.getElementById('project-dialog-caption');i.src=src;i.alt=alt||'';c.textContent=alt||'';d.style.display='flex';document.body.style.overflow='hidden';}
+function closeProjectDialog(){document.getElementById('project-dialog').style.display='none';document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape') closeProjectDialog();});
+</script>
