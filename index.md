@@ -155,7 +155,7 @@ description: Backend Engineer (Java/Spring/Kafka) & AI Engineer (PyTorch/RAG) �
       <div class="project-body">
         <h4>Blood Cancer<br/>Diagnosis API</h4>
         <p>~90% via SeResNext/PyTorch on microscopic images • Pandas/NumPy • Docker Hub. Internship project.</p>
-        <a href="https://github.com/saarques/Blood-Cancer-Diagnosis-API" target="_blank">GitHub →</a>
+        <a href="https://github.com/saarques/Blood-Cancer-Diagnosis-API" target="_blank">GitHub →</a> • <a href="https://hub.docker.com/r/sarques/bcpmodel" target="_blank" style="color:var(--blue);font-weight:700;">Docker Hub (173 pulls) →</a>
       </div>
     </div>
   </div>
