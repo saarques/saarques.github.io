@@ -193,6 +193,10 @@ a:hover { color: var(--blue) !important; }
   transition: all .15s;
   border: 1px solid transparent;
   white-space: nowrap;
+  line-height: 1.2 !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+  vertical-align: middle;
 }
 .btn-primary { background: var(--blue); color: white !important; }
 .btn-primary:hover { background: #1d4ed8 !important; color: white !important; }
@@ -260,7 +264,7 @@ a:hover { color: var(--blue) !important; }
 .metric .val { font-size: 16px; font-weight: 800; color: var(--text-1); }
 .metric .lab { font-size: 10px; font-weight: 700; color: var(--text-2); text-transform: lowercase; }
 .metric .sub { font-size: 9px; color: var(--text-3); }
-.hero-ctas { display: flex; gap: 12px; margin: 8px 0; flex-wrap: wrap; }
+.hero-ctas { display: flex; gap: 12px; margin: 8px 0; flex-wrap: wrap; overflow: visible !important; padding-bottom: 4px !important; }
 .hero-socials { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; font-size: 11px; color: var(--text-3); }
 .hero-socials a { color: var(--text-3) !important; word-break: break-all; }
 
@@ -476,6 +480,7 @@ a:hover { color: var(--blue) !important; }
   gap: 16px;
   flex-wrap: wrap;
   box-sizing: border-box;
+  overflow: visible !important;
 }
 .footer-cta h3 { color: white !important; margin: 0 !important; font-size: 18px !important; }
 .footer-cta p { color: #cbd5e1 !important; font-size: 11px; margin: 4px 0 0 0 !important; word-break: break-word; }

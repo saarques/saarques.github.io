@@ -161,7 +161,7 @@ description: Backend Engineer (Java/Spring/Kafka) & AI Engineer (PyTorch/RAG) �
   </div>
 </div>
 
-<div style="margin-top:16px;background:white;border:1px solid var(--border);border-radius:16px;padding:20px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;">
+<div style="margin-top:16px;background:white;border:1px solid var(--border);border-radius:16px;padding:20px 20px 22px 20px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:space-between;overflow:visible;">
   <div>
     <div style="font-size:13px;font-weight:800;color:var(--text-1);">Honors & Beyond</div>
     <div style="font-size:11px;color:var(--text-2);">GATE 2021 — 99.1%ile (AIR 943) • Kaggle SIIM-ISIC Top 19% • AI Pioneer L3 (Windsurf/Devin, RAG/Agents)</div>
